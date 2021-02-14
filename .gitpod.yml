@@ -1,5 +1,10 @@
 image: gitpod/workspace-full
 
+ports:
+    - port: 5000
+      onOpen: open-preview
+
 tasks:
   - init: pipenv install
-    command: FLASK_APP=chessvg pipenv run flask run
+    command: >
+      FLASK_APP=chessvg pipenv run flask run --host=0.0.0.0
