@@ -7,4 +7,4 @@ ports:
 tasks:
   - init: pipenv install
     command: >
-      FLASK_APP=chessvg pipenv run flask run --host=0.0.0.0
+      FLASK_APP=chessvg FLASK_ENV=development pipenv run flask run --host=0.0.0.0
